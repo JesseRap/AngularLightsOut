@@ -12,7 +12,27 @@
 
     <div class="row">
       <h1>Lights Out!</h1>
-      <button ng-click="reset()">RESET</button>
+      <!-- <input type="radio"
+       ng-model="string"
+       value="string"
+       [name="string"]
+       [ng-change="string"]
+       ng-value="string"> -->
+       <div class="topContainer">
+         <button ng-click="reset()">RESET</button><br>
+         Select # of rows<br>
+         <span ng-repeat="i in [1,2,3,4,5] track by $index">
+           <input type="radio" name="nRows" ng-model="nRowsObj.nRows" value="{{i}}">{{i}}
+         </span>
+        <!-- <input type="radio" name="nRows" ng-model="nRows" value="1">1
+        <input type="radio" name="nRows" ng-model="nRows" value="2">2
+        <input type="radio" name="nRows" ng-model="nRows" value="3">3
+        <input type="radio" name="nRows" ng-model="nRows" value="4">4<br> -->
+        <!--Total # of cells: {{nCells}}-->
+      </div>
+      <!-- <input type="radio" ng-model="value" value="foo" ng-change='newValue(value)'>
+      <input type="radio" ng-model="value" value="bar" ng-change='newValue(value)'>
+      <input type="radio" ng-model="value" value="baz" ng-change='newValue(value)'> -->
 
       <div class="lightsOutContainer" style="border: 1px solid red">
 
