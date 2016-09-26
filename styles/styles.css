@@ -1,0 +1,43 @@
+.lightsOn {
+  background-color: yellow;
+  transition: background-color 1s ease;
+}
+
+.lightsOut {
+  background-color: black;
+  transition: background-color 1s ease;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+}
+
+.lightsOutContainer {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.bigContainer {
+  width: auto;
+  margin: auto;
+  text-align: center;
+  border: 5px solid red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cell {
+  /*flex-grow: 1;*/
+  /*width: 30%;
+  height: 30%;*/
+  border: 2px solid blue;
+}

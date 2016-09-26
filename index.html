@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="LightsOut">
+  <head>
+    <title>Lights Out! in Angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body>
+  <div class="bigContainer" ng-controller="LightsOutController as LightsOutController">
+
+    <div class="row">
+      <h1>Lights Out!</h1>
+      <button ng-click="reset()">RESET</button>
+
+      <div class="lightsOutContainer" style="border: 1px solid red">
+
+        <div ng-repeat="cell in cellArray" class="cell" ng-class="getClass($index)" ng-click="clickCell($index)"></div>
+
+      </div>
+
+      <div ng-show="hasWon()"><h1>YOU WON!</h1></div>
+
+    </div>
+</div>
+
+</body>
+</html>
